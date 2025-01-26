@@ -52,42 +52,39 @@ const SkillsSection = () => {
       </motion.h2>
 
       <div className="skills-categories">
-        <motion.button
-          initial={{ opacity: 0 }}
-          whileHover={{ backgroundColor: "rgb(173, 37, 37)" }}
-          whileTap={{ backgroundColor: "rgb(188, 63, 63)" }}
-          whileInView={{ opacity: 1 }}
+        <motion.div
+        className="skill-box"
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}
           onClick={() => setActiveCategory("frontend")}
         >
           Frontend
-        </motion.button>
-        <motion.button
-          initial={{ opacity: 0 }}
-          whileHover={{ backgroundColor: "rgb(173, 37, 37))" }}
-          whileTap={{ backgroundColor: "rgb(188, 63, 63)" }}
-          whileInView={{ opacity: 1 }}
+        </motion.div>
+        <motion.div
+        className="skill-box"
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}
+ 
           onClick={() => setActiveCategory("backend")}
         >
           Backend
-        </motion.button>
-        <motion.button
-          initial={{ opacity: 0 }}
-          whileHover={{ backgroundColor: "rgba(220, 220, 220, 1)" }}
-          whileTap={{ backgroundColor: "rgba(255, 255, 255, 1)" }}
-          whileInView={{ opacity: 1 }}
-          onClick={() => setActiveCategory("tools")}
+        </motion.div>
+        <motion.div
+        className="skill-box"
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}
+            onClick={() => setActiveCategory("tools")}
         >
           Tools
-        </motion.button>
-        <motion.button
-          initial={{ opacity: 0 }}
-          whileHover={{ backgroundColor: "rgba(220, 220, 220, 1)" }}
-          whileTap={{ backgroundColor: "rgba(255, 255, 255, 1)" }}
-          whileInView={{ opacity: 1 }}
-          onClick={() => setActiveCategory("softskills")}
+        </motion.div>
+        <motion.div
+        className="skill-box"
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}
+            onClick={() => setActiveCategory("softskills")}
         >
           Soft Skills
-        </motion.button>
+        </motion.div>
       </div>
 
       <div
