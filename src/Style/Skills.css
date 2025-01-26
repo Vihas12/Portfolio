@@ -1,32 +1,132 @@
-/* You can include this in your CSS file */
+.skills-container {
+    margin: 3rem 0;
+  padding: 4rem 0;
+  position: relative;
+  text-align: center;
+}
+
+.skill-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 3.5rem;
+}
+
 .skills-section {
-  background-color: #f9f9f9;
+  display: flex;
+  align-items: flex-start;
   color: #333333;
+  gap: 3rem
+}
+
+.skills-categories {
+    flex:1;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.skill-box {
+    border-radius: 0.65rem;
+    padding: 2.5rem;
+    border: 1.5px solid #b59e856a;
+    margin: 1rem;
+    text-align: center;
+    backdrop-filter: blur(1rem);
+    position: relative;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.skill-box:hover,
+.skill-box:active {
+    background-color: #b59e856a;
 }
 
 .skills-list {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  border: 1.5px solid black;
+    min-height: 23rem;
+    width: 45rem;
+    border-radius: 0.65rem;
+    backdrop-filter: blur(1rem);
+}
+
+.skills-list h2{
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.8rem 2rem;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkir-text-fill-color: transparent;
+    border-bottom: 1.5px solid black;
 }
 
 .skill-item {
-  margin: 1rem;
-  padding: 1.5rem 2rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  text-align: center;
-  width: 150px;
-  transition: transform 0.3s ease;
-}
-
-.skill-item:hover {
-  transform: translateY(-5px);
-}
-
-skills-categories{
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin: 2rem 0;
+  padding: 1.5rem 2rem;
+   transition: transform 0.3s ease;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: flex-end;
 }
+
+.skill-info{
+    display: flex;
+    align-items: center;
+}
+.skill-item .icon {
+  font-size: 3rem;
+}
+
+.skill-item h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.skill-item p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+
+.progress-bar {
+    height: 8px;
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: #4CAF50;
+    border-radius: 4px;
+  }
+
+  @media (max-width: 600px) {
+    .skills-section {
+      flex-direction: column-reverse;
+      gap: 3rem;
+    }
+
+    .skills-container{
+      padding: 0;
+    }
+    .skill-box{
+        display: flex;
+        align-items: center;
+        font-size: small;
+        justify-content: center;
+      width: 7rem;
+      height: 5rem;
+    }
+
+    .skills-list {
+      width: 100%;
+    }
+  }

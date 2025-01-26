@@ -1,49 +1,54 @@
-import React from 'react'
+import React from "react";
+import { motion } from "framer-motion";
+
+import "../Style/Project.css";
+
+const projects = [
+  {
+    title: "Abusive Language Detection System for Blogging Website",
+    description:
+      "Developed a system that detects abusive language in comments on a blogging website. The system uses a machine learning model trained on a dataset of abusive and non-abusive comments.",
+  },
+  {
+    title: "Silent Speak",
+    description:
+      "Silent Speak is an Indian Sign Language learning platform. It is a web application for users to learn Indian Sign Language.",
+  },
+];
 
 export default function Project() {
   return (
-    <div>
-       <section id="projects" className="mb-20">
-          <motion.h2
-            className="text-3xl font-semibold text-teal-400"
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            Projects
-          </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-            {/* Example project card */}
+    <div id='projects' className="project-container">
+      <div className="blur-sphere sphere-1"></div>
+      <div className="blur-sphere sphere-2"></div>
+
+      <section id="projects" className="projects-section">
+        <motion.h2
+          className="section-title"
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+        >
+          Projects
+        </motion.h2>
+        <div className="projects-grid">
+          {projects.map((project) => (
             <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+              key={project.title}
+              initial={{ scale: 0.9, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: true }}
-              className="shadow-lg bg-gray-800 rounded-xl overflow-hidden hover:scale-105 transition-transform"
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="project-card"
             >
-              <div className="p-4">
-                <img
-                  src="https://via.placeholder.com/300x200"
-                  alt="Project Thumbnail"
-                  className="w-full h-40 object-cover"
-                />
-                <h3 className="font-semibold text-lg text-teal-400 mt-2">
-                  Project Name
-                </h3>
-                <p className="text-sm text-gray-400 mt-2">
-                  Brief project description. Highlight technologies used.
-                </p>
-                <a
-                  href="#"
-                  className="inline-block mt-4 bg-teal-500 text-white py-2 px-4 rounded-lg hover:bg-teal-600"
-                >
-                  View More
-                </a>
+              <div className="card-content">
+                <h3 className="card-title">{project.title}</h3>
+                <p className="card-description">{project.description}</p>
               </div>
             </motion.div>
-            {/* Repeat for other projects */}
-          </div>
-        </section>
-
+          ))}
+        </div>
+      </section>
     </div>
-  )
+  );
 }

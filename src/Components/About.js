@@ -19,7 +19,7 @@ const details = "I am a Full Stack Developer with a passion for Artificial Intel
 
 const About = () => {
   return (
-    <div className="about-container">
+    <div id='about' className="about-container">
       <section className="about-section">
 
         <motion.h2

@@ -61,6 +61,10 @@
 }
 
 @media (max-width: 768px) {
+  .navbar-content {
+      display: flex;
+      gap: 1rem;
+}
   .navbar-links {
       gap: 1rem;
       padding: 0;

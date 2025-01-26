@@ -1,44 +1,80 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React from "react";
+import { motion } from "framer-motion";
+import PropTypes from "prop-types";
 
-export default function Footer() {
+import emailIcon from "../images/socials/envelope.svg";
+import linkedinIcon from "../images/socials/linkedin.svg";
+import githubIcon from "../images/socials/github.svg";
+
+import "../Style/Footer.css";
+
+function Footer(props) {
+  const {
+    email,
+    gitHub,
+    linkedIn,
+} = props;
+
   return (
-    <div>
-      <motion.h2>
-          <motion.div
-            className="mt-6"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
+    <div id="contact" className="footer-container">
+      <motion.div
+        className="contact-section"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
+        <h2 className="contact-title">Feel free to reach out:</h2>
+        <ul className="contact-list">
+          <motion.li
+            className="contact-item"
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 300 }}
           >
-            <p className="text-gray-300">Feel free to reach out:</p>
-            <ul className="mt-6 space-y-4 text-gray-300">
-              <li>Email: your-email@example.com</li>
-              <li>
-                LinkedIn:{" "}
-                <a href="#" className="text-teal-400 underline">
-                  Your LinkedIn Profile
-                </a>
-              </li>
-              <li>
-                GitHub:{" "}
-                <a href="#" className="text-teal-400 underline">
-                  Your GitHub Profile
-                </a>
-              </li>
-            </ul>
-            <img
-              src="https://via.placeholder.com/600x400"
-              alt="Contact illustration"
-              className="rounded-xl shadow-lg mt-6"
-            />
-          </motion.div>
-      </motion.h2>
-      <footer className="text-center py-8 border-t border-gray-700">
-        <p className="text-sm text-gray-500">
+            <img src={emailIcon} alt="Email" className="contact-icon" />
+            <span>Email: {email}</span>
+          </motion.li>
+          <motion.li
+            className="contact-item"
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <img src={linkedinIcon} alt="LinkedIn" className="contact-icon" />
+            <span>
+              LinkedIn:{linkedIn}
+            </span>
+          </motion.li>
+          <motion.li
+            className="contact-item"
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <img src={githubIcon} alt="GitHub" className="contact-icon" />
+            <span>
+              GitHub: {gitHub}
+              </span>
+          </motion.li>
+        </ul>
+              </motion.div>
+
+      <footer className="footer">
+        <p className="footer-text">
           &copy; {new Date().getFullYear()} Your Name. All rights reserved.
         </p>
       </footer>
     </div>
-  )
+  );
 }
+
+
+
+Footer.defaultProps = {
+  name: "",
+};
+
+Footer.propTypes = {
+  email: PropTypes.string,
+  gitHub: PropTypes.string,
+  linkedIn: PropTypes.string,
+};
+
+export default Footer;

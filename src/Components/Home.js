@@ -6,6 +6,7 @@ import ManWithComputer from '../images/man-with-computer.png';
 
 const Home = ({name, title, info}) => {
   return (
+    <div id='home'>
     <section className='hero-container'>
       <header className="home-header">
         <motion.h2
@@ -47,6 +48,7 @@ const Home = ({name, title, info}) => {
         </motion.div>
       </div>
     </section>
+    </div>
   );
 }
 

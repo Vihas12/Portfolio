@@ -2,6 +2,8 @@ import Header from "./Components/Header";
 import Home from "./Components/Home";
 import About from "./Components/About";
 import Skills from "./Components/Skills";
+import Project from "./Components/Project";
+import Footer from "./Components/Footer";
 
 import "./Style/Style.css";
 
@@ -10,13 +12,9 @@ const infoProps = {
   title:
     "Full Stack Developer | Artificial Intelligence and Machine Learning Enthusiast",
   info: "I am a Full Stack Developer with a passion for Artificial Intelligence and Machine Learning. I am always eager to learn new technologies and explore new domains.",
-  email: "alex@example.com",
-  gitHub: "microsoft",
-  instagram: "microsoft",
-  linkedIn: "satyanadella",
-  medium: "",
-  twitter: "microsoft",
-  youTube: "Code",
+  email: "vihas.poojari23@it.sce.edu.in",
+  gitHub: "https://github.com/Vihas12",
+  linkedIn: "https://www.linkedin.com/in/vihas-poojari"
 };
 
 function App() {
@@ -31,7 +29,9 @@ function App() {
         />
         <About />
         <Skills />
+        <Project />
       </div>
+      <Footer {...infoProps} />
     </div>
   );
 }
