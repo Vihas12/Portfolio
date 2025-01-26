@@ -1,0 +1,32 @@
+/* You can include this in your CSS file */
+.skills-section {
+  background-color: #f9f9f9;
+  color: #333333;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skill-item {
+  margin: 1rem;
+  padding: 1.5rem 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  width: 150px;
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+}
+
+skills-categories{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
