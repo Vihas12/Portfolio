@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.19c61ead.css",
+    "main.js": "/portfolio/static/js/main.11952bc7.js",
+    "static/media/man-with-computer.png": "/portfolio/static/media/man-with-computer.5511c7d47b8a60b2fc2d.png",
+    "static/media/github.svg": "/portfolio/static/media/github.4bc72f28e79178cdc9c76db0b22c501e.svg",
+    "static/media/linkedin.svg": "/portfolio/static/media/linkedin.36bd4fb37078da2bbffc9b70a0acc872.svg",
+    "index.html": "/portfolio/index.html",
+    "static/media/envelope.svg": "/portfolio/static/media/envelope.33857507a5ba83c373a8c7d5f0d0c948.svg",
+    "main.19c61ead.css.map": "/portfolio/static/css/main.19c61ead.css.map",
+    "main.11952bc7.js.map": "/portfolio/static/js/main.11952bc7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.19c61ead.css",
+    "static/js/main.11952bc7.js"
+  ]
+}
